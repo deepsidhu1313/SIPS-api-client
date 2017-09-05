@@ -26,6 +26,7 @@ import java.text.DecimalFormat;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.json.JSONObject;
 
 /**
  * Utility methods for jDiskMark
@@ -78,7 +79,10 @@ public class Util {
         return java.util.UUID.randomUUID() + ":" + java.util.UUID.randomUUID();
     }
 
-  
+      public static JSONObject readJSONFile(String location) {
+        String content = readFile(location).trim();
+        return new JSONObject((content.length() < 1) ? "{}" : content);
+    }
 
 
 }

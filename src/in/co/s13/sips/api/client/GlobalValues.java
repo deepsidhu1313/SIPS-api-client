@@ -10,5 +10,5 @@ package in.co.s13.sips.api.client;
  * @author nika
  */
 public class GlobalValues {
-    public static String UUID;
+    public static String UUID="";
 }
